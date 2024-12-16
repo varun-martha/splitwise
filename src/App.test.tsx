@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App.tsx';
+import App from './App';
 import { InitialEntry } from '@remix-run/router';
 import { MemoryRouter } from 'react-router-dom';
 
