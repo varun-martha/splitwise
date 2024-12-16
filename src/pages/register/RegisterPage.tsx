@@ -2,9 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import './RegisterPage.css'
 import { SubmitHandler, useForm } from 'react-hook-form';
-import dotenv from 'dotenv';
 import User from '../../types/User';
-dotenv.config();
 
 const RegisterPage = () => {
      const {
@@ -17,7 +15,7 @@ const RegisterPage = () => {
 
     const handleRegister: SubmitHandler<User> = async(user) => {
         try{
-            const response = await fetch(`${process.env.BASE_URL}/users`, {
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/users`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

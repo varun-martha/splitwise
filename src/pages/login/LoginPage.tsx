@@ -2,9 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import dotenv from 'dotenv';
 import Credentials from '../../types/Credentials';
-dotenv.config();
 
 const LoginPage = () => {
     const {
@@ -17,7 +15,7 @@ const LoginPage = () => {
     const navigate = useNavigate();
     const login: SubmitHandler<Credentials> = async(credentials) => {
         try{
-            const response = await fetch(`${process.env.BASE_URL}/login`, {
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
