@@ -1,9 +1,9 @@
 import React from 'react';
-import WelcomePage from './pages/welcome/WelcomePage';
+import WelcomePage from './pages/welcome/WelcomePage.tsx';
 import { Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/login/LoginPage';
-import RegisterPage from './pages/register/RegisterPage';
-import HomePage from './pages/home/HomePage';
+import LoginPage from './pages/login/LoginPage.tsx';
+import RegisterPage from './pages/register/RegisterPage.tsx';
+import HomePage from './pages/home/HomePage.tsx';
 
 function App() {
   return (
