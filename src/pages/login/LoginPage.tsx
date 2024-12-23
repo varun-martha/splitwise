@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Credentials from '../../types/Credentials';
+import { GlobalContext } from '../../context/context.tsx';
 
 const LoginPage = () => {
+
+    const {setUser} = useContext(GlobalContext);
+
     const {
         register,
         handleSubmit,
@@ -23,6 +27,14 @@ const LoginPage = () => {
                 body: JSON.stringify(credentials)
             });
             if(response.ok) {
+                const result = await response.json();
+                alert(result.message);
+                console.log(result.user.name);
+                setUser({
+                    username: result.user.name,
+                    email:result.user.email,
+                    mobileNumber: result.user.mobileNumber
+                });
                 navigate('/home');
             } else{
                 const result = await response.json();
