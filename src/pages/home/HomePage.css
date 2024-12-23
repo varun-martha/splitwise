@@ -1,0 +1,57 @@
+.box2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.left-block {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.button-wrapper {
+  margin-bottom: 10px;
+}
+
+.invite-friend-btn {
+  text-transform: none;
+  padding: 8px 20px;
+  background-color: #7767f0;
+  width: 80%;
+}
+
+.invite-friend-btn:hover {
+  background-color: #514ed4;
+}
+
+.add-friend-btn {
+  text-transform: none;
+  padding: 8px 20px;
+  background-color: #212152;
+  width: 80%;
+}
+
+.add-friend-btn:hover {
+  background-color: #514ed4;
+}
+
+.middle-block {
+  flex: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: white;
+}
+
+.middle-block .button-wrapper {
+  margin-bottom: 10px;
+}
+
+.middle-block button {
+  width: 80%;
+}
+
+.right-block {
+  flex: 1;
+  margin-left: 20px;
+}
