@@ -1,0 +1,7 @@
+version: '3'
+services:
+  splitwise-frontend:
+    container_name: splitwise-app
+    build:
+      context: .
+      dockerfile: Dockerfile
